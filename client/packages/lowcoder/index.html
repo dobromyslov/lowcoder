@@ -54,7 +54,9 @@
     <script>
       window.global = window;
     </script>
+    <% if (process.env.REACT_APP_ENABLE_AIRGAP !== 'true') { %>
     <script async defer src="//js-eu1.hs-scripts.com/144574215.js" type="text/javascript" id="hs-script-loader"></script>
+    <% } %>
   </head>
   <body>
     <div id="not-supported-browser"></div>

@@ -55,6 +55,10 @@ const buildVars = [
     name: "REACT_APP_DISABLE_JS_SANDBOX",
     defaultValue: "",
   },
+  {
+    name: "REACT_APP_ENABLE_AIRGAP",
+    defaultValue: ""
+  },
 ];
 
 module.exports = {

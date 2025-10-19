@@ -63,6 +63,10 @@ const getAxiosInstance = (clientSecret?: string) => {
 class SupportApi extends Api {
 
   static async secureRequest(body: any): Promise<any> {
+    if (REACT_APP_ENABLE_AIRGAP) {
+      return Promise.resolve(null);
+    }
+
     let response;
     const axiosInstance = getAxiosInstance();
 

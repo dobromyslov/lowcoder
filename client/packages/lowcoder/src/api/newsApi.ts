@@ -35,6 +35,10 @@ const getAxiosInstance = (clientSecret?: string) => {
 class NewsApi extends Api {
   
   static async secureRequest(body: any, timeout: number = 6000): Promise<any> {
+    if (REACT_APP_ENABLE_AIRGAP) {
+      return Promise.resolve(null);
+    }
+
     let response;
     const axiosInstance = getAxiosInstance();
 

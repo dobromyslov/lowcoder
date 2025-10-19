@@ -204,4 +204,12 @@ Image can be configured by setting environment variables.
 | `LOWCODER_API_SERVICE_URL`      | Lowcoder API service URL                                            | `http://localhost:8080`                                 |
 | `LOWCODER_NODE_SERVICE_URL`     | Lowcoder Node service (js executor) URL                             | `http://localhost:6060`                                 |
 
+### Air-gapped version
 
+Air-gapped version can be deployed in restricted environments when external communications are prohibited to comply 
+with security requirements.
+
+To build `lowcoder-ce-airgapped-frontend` docker image, from project root run:
+```
+DOCKER_BUILDKIT=1 docker build -f deploy/docker/Dockerfile -t lowcoderorg/lowcoder-ce-airgapped-frontend --target lowcoder-ce-airgapped-frontend .
+```
