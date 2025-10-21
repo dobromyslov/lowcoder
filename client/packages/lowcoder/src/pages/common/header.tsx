@@ -718,7 +718,7 @@ export function AppHeader() {
   const headerEnd = (
     <Row align="middle" gutter={32}>
       <Col style={{marginTop : "6px"}}>
-      {user.orgDev && ( 
+      {user.orgDev && !REACT_APP_ENABLE_AIRGAP && (
         <GitHubButton
           href="https://github.com/lowcoder-org/lowcoder"
           data-color-scheme="no-preference: light; light: light; dark: dark;"
